@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Libros
@@ -15,25 +10,9 @@ namespace Libros
         private static List<Libro> libros;
         public Form1()
         {
-            libros = new List<Libro>();
-            
+            libros = new List<Libro>();            
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -96,7 +75,7 @@ namespace Libros
             initListView();
             foreach (var item in libros)                
                 listView1.Items.Add(createItem(item));//Agregando datos al listview
-            label13.Text = $"Total de libros(Cantidad):{libros.Sum(libro => libro.Cantidad)}";//Instruccion para calcular la cantidad de libros            
+            label13.Text = $"Total de libros: ${libros.Sum(libro => libro.Cantidad * libro.Precio)}";//Instruccion para calcular la cantidad de libros            
         }
         private ListViewItem createItem(Libro item)//Add d
         {
@@ -107,25 +86,6 @@ namespace Libros
             a.SubItems.Add(item.Date.ToLocalTime().ToString());
             a.SubItems.Add(item.Categoria);            
             return a;
-        }
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void loginPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void librosPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

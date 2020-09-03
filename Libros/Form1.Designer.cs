@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +83,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(877, 24);
             this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.menuStrip1.Text = "menuStrip1";            
             // 
             // librosToolStripMenuItem
             // 
@@ -128,8 +127,7 @@
             this.loginPanel.Location = new System.Drawing.Point(0, 33);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(877, 192);
-            this.loginPanel.TabIndex = 1;
-            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
+            this.loginPanel.TabIndex = 1;            
             // 
             // button1
             // 
@@ -161,8 +159,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Usuario:";            
             // 
             // username
             // 
@@ -214,13 +211,12 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(352, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 25);
+            this.label12.Size = new System.Drawing.Size(165, 25);
             this.label12.TabIndex = 2;
-            this.label12.Text = "Lista de libros :D";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.label12.Text = "Lista de libros :D";            
             // 
             // listView1
             // 
@@ -237,7 +233,7 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(3, 68);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(834, 200);
@@ -297,8 +293,7 @@
             this.librosPanel.Name = "librosPanel";
             this.librosPanel.Size = new System.Drawing.Size(853, 261);
             this.librosPanel.TabIndex = 2;
-            this.librosPanel.Visible = false;
-            this.librosPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.librosPanel_Paint);
+            this.librosPanel.Visible = false;            
             // 
             // button3
             // 
@@ -411,8 +406,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 19);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Fecha de publicación:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.Text = "Fecha de publicación:";            
             // 
             // label7
             // 
