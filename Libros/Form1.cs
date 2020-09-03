@@ -100,20 +100,24 @@ namespace Libros
             consultarPanel.Visible = true;            
             if (libros.Count > 0)
             {
-                foreach (var item in libros)
-                {
-                    var a = new ListViewItem(item.Nombre);                       
-                    a.SubItems.Add(item.Autor);
-                    a.SubItems.Add(item.Categoria);
-                    a.SubItems.Add(item.Cantidad.ToString());
-                    a.SubItems.Add(item.Precio.ToString());
-                    a.SubItems.Add(item.Date.ToLocalTime().ToString());
-                    listView1.Items.Add(a);                    
-                }
-                label13.Text = $"Total de libros(Cantidad):{libros.Sum(libro => libro.Cantidad)}";
+                foreach (var item in libros)                
+                    listView1.Items.Add(createItem(item));//Agregando datos al listview
+                label13.Text = $"Total de libros(Cantidad):{libros.Sum(libro => libro.Cantidad)}";//Instruccion para calcular la cantidad de libros
             }
         }
-
+        private ListViewItem createItem(Libro item)//Add d
+        {
+            var a = new ListViewItem(item.Nombre);
+            a.SubItems.Add(item.Autor);
+            a.SubItems.Add(item.Cantidad.ToString());
+            a.SubItems.Add(item.Precio.ToString());
+            a.SubItems.Add(item.Date.ToLocalTime().ToString());
+            a.SubItems.Add(item.Categoria);
+            
+            
+            
+            return a;
+        }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
