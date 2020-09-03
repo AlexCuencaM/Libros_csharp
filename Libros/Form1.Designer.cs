@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.TextBox();
+            this.clave = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.consultarPanel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -46,12 +52,6 @@
             this.precioCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.categoriaCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.clave = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.librosPanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             this.loginToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1077, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -98,14 +98,14 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.registroToolStripMenuItem.Text = "Registro";
             this.registroToolStripMenuItem.Click += new System.EventHandler(this.registroToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
@@ -125,11 +125,71 @@
             this.loginPanel.Controls.Add(this.username);
             this.loginPanel.Controls.Add(this.clave);
             this.loginPanel.Controls.Add(this.label1);
-            this.loginPanel.Location = new System.Drawing.Point(30, 33);
+            this.loginPanel.Location = new System.Drawing.Point(0, 33);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(970, 192);
+            this.loginPanel.Size = new System.Drawing.Size(877, 192);
             this.loginPanel.TabIndex = 1;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(380, 137);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 51);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Ingresar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(284, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 19);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Contraseña:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(284, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Usuario:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // username
+            // 
+            this.username.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(421, 54);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(198, 20);
+            this.username.TabIndex = 1;
+            // 
+            // clave
+            // 
+            this.clave.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clave.Location = new System.Drawing.Point(421, 97);
+            this.clave.Name = "clave";
+            this.clave.PasswordChar = '@';
+            this.clave.Size = new System.Drawing.Size(198, 20);
+            this.clave.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(386, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "LOGIN";
             // 
             // consultarPanel
             // 
@@ -137,9 +197,9 @@
             this.consultarPanel.Controls.Add(this.label13);
             this.consultarPanel.Controls.Add(this.label12);
             this.consultarPanel.Controls.Add(this.listView1);
-            this.consultarPanel.Location = new System.Drawing.Point(12, 84);
+            this.consultarPanel.Location = new System.Drawing.Point(12, 39);
             this.consultarPanel.Name = "consultarPanel";
-            this.consultarPanel.Size = new System.Drawing.Size(1050, 390);
+            this.consultarPanel.Size = new System.Drawing.Size(850, 390);
             this.consultarPanel.TabIndex = 3;
             // 
             // label13
@@ -155,7 +215,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(408, 14);
+            this.label12.Location = new System.Drawing.Point(352, 10);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(173, 25);
             this.label12.TabIndex = 2;
@@ -180,7 +240,7 @@
             listViewItem1});
             this.listView1.Location = new System.Drawing.Point(3, 68);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1034, 200);
+            this.listView1.Size = new System.Drawing.Size(834, 200);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -193,7 +253,7 @@
             // autorCol
             // 
             this.autorCol.Text = "Autor";
-            this.autorCol.Width = 146;
+            this.autorCol.Width = 129;
             // 
             // cantidadCol
             // 
@@ -203,77 +263,17 @@
             // precioCol
             // 
             this.precioCol.Text = "Precio";
-            this.precioCol.Width = 99;
+            this.precioCol.Width = 88;
             // 
             // dateCol
             // 
             this.dateCol.Text = "Fecha";
-            this.dateCol.Width = 248;
+            this.dateCol.Width = 188;
             // 
             // categoriaCol
             // 
             this.categoriaCol.Text = "Categoría";
-            this.categoriaCol.Width = 186;
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(384, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 51);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ingresar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(276, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Contraseña:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(276, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // clave
-            // 
-            this.clave.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clave.Location = new System.Drawing.Point(491, 97);
-            this.clave.Name = "clave";
-            this.clave.PasswordChar = '@';
-            this.clave.Size = new System.Drawing.Size(100, 20);
-            this.clave.TabIndex = 2;
-            // 
-            // username
-            // 
-            this.username.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(491, 51);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
-            this.username.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(406, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LOGIN";
+            this.categoriaCol.Width = 124;
             // 
             // librosPanel
             // 
@@ -295,7 +295,7 @@
             this.librosPanel.Controls.Add(this.label4);
             this.librosPanel.Location = new System.Drawing.Point(12, 36);
             this.librosPanel.Name = "librosPanel";
-            this.librosPanel.Size = new System.Drawing.Size(1053, 261);
+            this.librosPanel.Size = new System.Drawing.Size(853, 261);
             this.librosPanel.TabIndex = 2;
             this.librosPanel.Visible = false;
             this.librosPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.librosPanel_Paint);
@@ -448,7 +448,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Californian FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(370, 7);
+            this.label4.Location = new System.Drawing.Point(373, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 31);
             this.label4.TabIndex = 0;
@@ -458,7 +458,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 526);
+            this.ClientSize = new System.Drawing.Size(877, 526);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.consultarPanel);
             this.Controls.Add(this.librosPanel);
