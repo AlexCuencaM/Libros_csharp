@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,14 +99,14 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroToolStripMenuItem.Text = "Registro";
             this.registroToolStripMenuItem.Click += new System.EventHandler(this.registroToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
@@ -124,8 +124,9 @@
             this.loginPanel.Controls.Add(this.label3);
             this.loginPanel.Controls.Add(this.label2);
             this.loginPanel.Controls.Add(this.username);
+            this.loginPanel.Controls.Add(this.clave);
             this.loginPanel.Controls.Add(this.label1);
-            this.loginPanel.Location = new System.Drawing.Point(37, 40);
+            this.loginPanel.Location = new System.Drawing.Point(30, 33);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(970, 192);
             this.loginPanel.TabIndex = 1;
@@ -138,9 +139,9 @@
             this.consultarPanel.Controls.Add(this.label12);
             this.consultarPanel.Controls.Add(this.label11);
             this.consultarPanel.Controls.Add(this.listView1);
-            this.consultarPanel.Location = new System.Drawing.Point(37, 368);
+            this.consultarPanel.Location = new System.Drawing.Point(12, 84);
             this.consultarPanel.Name = "consultarPanel";
-            this.consultarPanel.Size = new System.Drawing.Size(926, 390);
+            this.consultarPanel.Size = new System.Drawing.Size(1050, 390);
             this.consultarPanel.TabIndex = 3;
             // 
             // label13
@@ -156,7 +157,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(293, 8);
+            this.label12.Location = new System.Drawing.Point(408, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(173, 25);
             this.label12.TabIndex = 2;
@@ -187,10 +188,10 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(3, 68);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(910, 200);
+            this.listView1.Size = new System.Drawing.Size(1034, 200);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -253,7 +254,7 @@
             // 
             // clave
             // 
-            this.clave.Location = new System.Drawing.Point(501, 406);
+            this.clave.Location = new System.Drawing.Point(491, 97);
             this.clave.Name = "clave";
             this.clave.PasswordChar = '@';
             this.clave.Size = new System.Drawing.Size(100, 20);
@@ -293,7 +294,7 @@
             this.librosPanel.Controls.Add(this.label6);
             this.librosPanel.Controls.Add(this.label5);
             this.librosPanel.Controls.Add(this.label4);
-            this.librosPanel.Location = new System.Drawing.Point(12, 66);
+            this.librosPanel.Location = new System.Drawing.Point(12, 36);
             this.librosPanel.Name = "librosPanel";
             this.librosPanel.Size = new System.Drawing.Size(1053, 261);
             this.librosPanel.TabIndex = 2;
@@ -448,7 +449,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Californian FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(368, 7);
+            this.label4.Location = new System.Drawing.Point(370, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 31);
             this.label4.TabIndex = 0;
@@ -459,11 +460,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 526);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.loginPanel);
-            this.Controls.Add(this.librosPanel);
             this.Controls.Add(this.consultarPanel);
-            this.Controls.Add(this.clave);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.librosPanel);
+            this.Controls.Add(this.loginPanel);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
