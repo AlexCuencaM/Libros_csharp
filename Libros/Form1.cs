@@ -39,13 +39,7 @@ namespace Libros
         {
             fechaField.CustomFormat = "dd/MM/yyyy";
             hidePanels();
-            loginPanel.Visible = true;
-            //listView1.Columns.Add("Nombre", -2, HorizontalAlignment.Left);
-            //listView1.Columns.Add("Autor", -2, HorizontalAlignment.Left);
-            //listView1.Columns.Add("Categoria", -2, HorizontalAlignment.Left);
-            //listView1.Columns.Add("Cantidad", -2, HorizontalAlignment.Left);
-            //listView1.Columns.Add("Precio", -2, HorizontalAlignment.Center);
-            //listView1.Columns.Add("Fecha", -2, HorizontalAlignment.Left);
+            loginPanel.Visible = true;           
             fechaField.Format = DateTimePickerFormat.Custom;
         }
 
@@ -60,9 +54,8 @@ namespace Libros
                 Precio = Decimal.Parse(precioField.Text),
                 Categoria = categoriaField.SelectedItem.ToString()
             };
-            MessageBox.Show($"Ingreso exitoso {libro.Nombre}");
-            libros.Add(libro);
-            
+            MessageBox.Show($"Ingreso exitoso del libro: {libro.Nombre}");
+            libros.Add(libro);            
         }
 
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,18 +85,18 @@ namespace Libros
             precioField.Text = "";
             categoriaField.SelectedIndex = 0;
         }
-
-        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void initListView()
         {
             listView1.Items.Clear();
             hidePanels();
-            consultarPanel.Visible = true;            
-            if (libros.Count > 0)
-            {
-                foreach (var item in libros)                
-                    listView1.Items.Add(createItem(item));//Agregando datos al listview
-                label13.Text = $"Total de libros(Cantidad):{libros.Sum(libro => libro.Cantidad)}";//Instruccion para calcular la cantidad de libros
-            }
+            consultarPanel.Visible = true;
+        }
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            initListView();
+            foreach (var item in libros)                
+                listView1.Items.Add(createItem(item));//Agregando datos al listview
+            label13.Text = $"Total de libros(Cantidad):{libros.Sum(libro => libro.Cantidad)}";//Instruccion para calcular la cantidad de libros            
         }
         private ListViewItem createItem(Libro item)//Add d
         {
@@ -112,10 +105,7 @@ namespace Libros
             a.SubItems.Add(item.Cantidad.ToString());
             a.SubItems.Add(item.Precio.ToString());
             a.SubItems.Add(item.Date.ToLocalTime().ToString());
-            a.SubItems.Add(item.Categoria);
-            
-            
-            
+            a.SubItems.Add(item.Categoria);            
             return a;
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
